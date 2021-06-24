@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ex02</title>
+    <style>
+        p {
+            background: #dad;
+            font-size: 18px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+
+        $(function() {
+            $("#b1").click(function() {
+                $("p").hide(2000);          // 2000 毫秒 = 2 秒
+            });
+
+            $("#b2").click(function() {
+                $("p").show(2000);
+            });
+
+            $("#b3").click(function() {
+                $("p").toggle("slow");      // "slow", "normal", 或 "fast"
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <button id="b1">hide</button>
+    <button id="b2">show</button>
+    <button id="b3">toggle</button>
+    <p>結廬在人境，而無車馬喧。</p>
+    <p>問君何能爾？心遠地自偏。</p>
+
+    <script>
+
+        // 不用等 HTML 加載完
+        // $("#b1").click(function() {
+        //     $("p").hide(2000);
+        // });
+
+        // $("#b2").click(function() {
+        //     $("p").show(2000);
+        // });
+
+        // $("#b3").click(function() {
+        //     $("p").toggle("slow");
+        // });
+
+    </script>    
+</body>
+</html>
